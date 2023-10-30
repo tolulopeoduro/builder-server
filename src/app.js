@@ -1,6 +1,7 @@
 import express, { json } from 'express';
 import { MongoClient, ServerApiVersion } from 'mongodb';
 import users from './routes/users';
+import projects from './routes/projects';
 
 const app = express();
 
@@ -35,3 +36,4 @@ async function run() {
 run().catch(console.dir);
 
 app.use("/users", users);
+app.use("/projects", projects);
